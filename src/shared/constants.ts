@@ -1,7 +1,9 @@
-/**
- * Drop your live ExtensionPay extension ID here once registered at https://extensionpay.com
- */
-export const EXTPAY_EXTENSION_ID = 'cloakshot-placeholder';
+// ============================================================================
+// EXTENSIONPAY CONFIGURATION
+// Paste the exact Extension ID registered at https://extensionpay.com below,
+// then run `npm run zip` to build your Chrome Web Store release archive.
+// ============================================================================
+export const EXTPAY_EXTENSION_ID = 'cloakshot';
 
 export const CLOAKSHOT_HOST_ID = 'cloakshot-shadow-host';
 export const CLOAKSHOT_BOX_HOST_ID = 'cloakshot-box-host';

@@ -68,6 +68,11 @@ FREE FOREVER & OPTIONAL $14 ONE-TIME PRO PASS
 - **Category:** `Productivity` (or `Workflow & Planning`)
 - **Language:** `English (United States)`
 
+### Support Email
+```text
+cibulesmedia@gmail.com
+```
+
 ### Privacy Policy URL
 ```text
 https://cibulesmedia-alt.github.io/cloakshot/privacy.html
@@ -120,9 +125,9 @@ Required to identify the active tab on keyboard command activation, check whethe
 Required to copy the user's locally captured PNG screenshot directly to their system clipboard when they click Copy PNG.
 ```
 
-#### Host Permission Justification (`optional_host_permissions: ["<all_urls>"]`)
+#### Host Permission Justification (`host_permissions: ["https://extensionpay.com/*"]` & `optional_host_permissions: ["<all_urls>"]`)
 ```text
-CloakShot does not request any required host permissions at install time. optional_host_permissions ("<all_urls>") is requested dynamically via chrome.permissions.request for a single specific hostname only when the user explicitly clicks "Save rules for [domain]" to enable automatic masking whenever they revisit that domain.
+host_permissions is strictly scoped to https://extensionpay.com/* solely to verify the user's optional one-time Pro license status and handle payment completion callbacks via ExtensionPay. CloakShot requests zero broad webpage host permissions at install time; optional_host_permissions ("<all_urls>") is requested dynamically via chrome.permissions.request for a single specific hostname only when the user explicitly clicks "Save rules for [domain]" to enable automatic masking whenever they revisit that domain.
 ```
 
 ### Remote Code Declaration

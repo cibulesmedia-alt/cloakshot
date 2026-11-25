@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "CloakShot — Privacy & Demo Studio",
+  "version": "1.0.0",
+  "description": "100% browser-local privacy & demo studio: Blur, Solid Redact, Smart Mock Swap, Live Screen-Share Shield & Dual Scroll Capture.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "CloakShot (Alt+Shift+C)",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "clipboardWrite"
+  ],
+  "optional_host_permissions": [
+    "<all_urls>"
+  ],
+  "commands": {
+    "toggle-cloakshot": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "mac": "Alt+Shift+C"
+      },
+      "description": "Toggle CloakShot floating studio on the current page"
+    }
+  }
+}

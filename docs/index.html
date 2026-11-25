@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloakShot — Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for CloakShot — the 100% browser-local privacy and demo studio Chrome Extension."
+    />
+    <style>
+      :root {
+        --bg: #020617;
+        --surface: #0f172a;
+        --border: rgba(148, 163, 184, 0.18);
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --heading: #f8fafc;
+        --accent: #38bdf8;
+        --emerald: #34d399;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: radial-gradient(circle at top center, #0f172a 0%, var(--bg) 55%);
+        color: var(--text);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 48px 24px 72px;
+      }
+      header {
+        margin-bottom: 36px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(52, 211, 153, 0.12);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+        color: var(--emerald);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 14px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.2;
+        color: var(--heading);
+        letter-spacing: -0.02em;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.78);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 19px;
+        color: var(--heading);
+        letter-spacing: -0.01em;
+      }
+      p {
+        margin: 0 0 12px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.9em;
+        background: rgba(56, 189, 248, 0.12);
+        color: #bae6fd;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        margin-top: 36px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="badge">100% Browser-Local • Zero Telemetry</div>
+        <h1>CloakShot Privacy Policy</h1>
+        <div class="meta">
+          Effective Date: <strong>November 2026</strong> <!-- [EFFECTIVE_DATE] -->
+          &nbsp;•&nbsp; Contact: <a href="mailto:[CONTACT_EMAIL]">[CONTACT_EMAIL]</a>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>1. Core Privacy Commitment (100% Client-Side Execution)</h2>
+        <p>
+          <strong>CloakShot</strong> is engineered as a 100% browser-local privacy and demo studio
+          for webpages. All DOM blurring, solid redaction, Smart Mock Swap generation, regex pattern
+          scanning, Live Screen-Share Shielding, and scrolling screenshot stitching run strictly
+          client-side inside your local Chrome browser.
+        </p>
+        <p>
+          <strong>Zero webpage data ever leaves your device.</strong> CloakShot does not operate any
+          backend servers, does not use analytics or telemetry scripts, and never transmits, logs,
+          stores remotely, or sells your webpage contents, screenshots, clipboard contents, or
+          browsing history.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>
+          CloakShot uses Chrome's built-in <code>chrome.storage.local</code> API solely to persist
+          your local preferences and optional settings on your own machine:
+        </p>
+        <ul>
+          <li>
+            <strong>User Preferences:</strong> Studio toggles such as Auto-Restore after Capture and
+            Clean Frame backdrop preference.
+          </li>
+          <li>
+            <strong>Saved Domain Rules (Optional):</strong> Hostnames and Auto-Scan categories you
+            explicitly choose to save so CloakShot can automatically mask sensitive fields when you
+            revisit those domains. You can delete any saved domain rule at any time from the
+            CloakShot popup.
+          </li>
+        </ul>
+        <p>
+          Original webpage text and DOM snapshots used for instant Undo and Restore are held solely
+          in volatile in-memory structures (<code>WeakMap</code>) for the current tab session and
+          are discarded immediately when you restore, reload, or close the tab.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3. Payments &amp; Pro License Verification (ExtensionPay &amp; Stripe)</h2>
+        <p>
+          CloakShot offers an optional one-time Pro Lifetime Pass. Checkout, billing, and license
+          verification are handled securely by
+          <a href="https://extensionpay.com" target="_blank" rel="noopener noreferrer">ExtensionPay</a>
+          and
+          <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>.
+        </p>
+        <p>
+          When you purchase or restore a Pro license, ExtensionPay and Stripe process your payment
+          details and email address strictly to complete your transaction and verify your Pro
+          entitlement across Chrome installations. CloakShot itself never sees or stores your credit
+          card details. For more details, please review
+          <a href="https://extensionpay.com/privacy" target="_blank" rel="noopener noreferrer">ExtensionPay's Privacy Policy</a>
+          and
+          <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe's Privacy Policy</a>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>4. Chrome Permissions Transparency</h2>
+        <p>CloakShot requests only the minimum permissions necessary to function locally:</p>
+        <ul>
+          <li>
+            <code>activeTab</code> &amp; <code>scripting</code>: Injects the isolated Shadow DOM
+            toolbar and masking engine into the current tab only when you trigger CloakShot via
+            <code>Alt+Shift+C</code> (<code>Option+Shift+C</code> on macOS) or click the extension
+            popup.
+          </li>
+          <li>
+            <code>tabs</code>: Identifies the active tab and captures the visible viewport via
+            <code>chrome.tabs.captureVisibleTab</code> when you initiate a screenshot.
+          </li>
+          <li>
+            <code>clipboardWrite</code>: Copies your locally rendered PNG screenshot directly to
+            your system clipboard when you choose 1-click Copy PNG.
+          </li>
+          <li>
+            <code>storage</code>: Saves your local preferences and optional Saved Domain Rules in
+            <code>chrome.storage.local</code>.
+          </li>
+          <li>
+            <code>optional_host_permissions</code> (<code>&lt;all_urls&gt;</code>): Not granted at
+            install time. Requested dynamically for a specific hostname only if you explicitly click
+            <strong>Save rules for [domain]</strong> so CloakShot can auto-apply your privacy
+            shield on revisit.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. Changes &amp; Contact</h2>
+        <p>
+          If we ever update this Privacy Policy, the revised version will be posted at this URL with
+          an updated effective date. If you have any questions about CloakShot's privacy practices,
+          please contact us at <a href="mailto:[CONTACT_EMAIL]">[CONTACT_EMAIL]</a>.
+        </p>
+      </section>
+
+      <footer>
+        <span>CloakShot — Privacy &amp; Demo Studio</span>
+        <span>100% Local • Zero Servers • Zero Tracking</span>
+      </footer>
+    </main>
+  </body>
+</html>

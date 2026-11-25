@@ -31,7 +31,7 @@ async function resolveProStatus(): Promise<ProStatus> {
     };
   }
 
-  if (extpay && EXTPAY_EXTENSION_ID !== 'cloakshot-placeholder') {
+  if (extpay) {
     try {
       const user = await extpay.getUser();
       return {
@@ -158,26 +158,26 @@ chrome.runtime.onMessage.addListener((message: RuntimeMessage, sender, sendRespo
       }
 
       case 'OPEN_PAYMENT_PAGE': {
-        if (extpay && EXTPAY_EXTENSION_ID !== 'cloakshot-placeholder') {
+        if (extpay) {
           extpay.openPaymentPage();
           sendResponse({ ok: true });
         } else {
           sendResponse({
             ok: false,
-            error: 'Configure EXTPAY_EXTENSION_ID in src/shared/constants.ts to enable checkout.',
+            error: 'ExtensionPay is not initialized.',
           });
         }
         break;
       }
 
       case 'OPEN_LOGIN_PAGE': {
-        if (extpay && EXTPAY_EXTENSION_ID !== 'cloakshot-placeholder') {
+        if (extpay) {
           extpay.openLoginPage();
           sendResponse({ ok: true });
         } else {
           sendResponse({
             ok: false,
-            error: 'Configure EXTPAY_EXTENSION_ID in src/shared/constants.ts to manage licenses.',
+            error: 'ExtensionPay is not initialized.',
           });
         }
         break;
